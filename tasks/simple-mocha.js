@@ -11,7 +11,7 @@ module.exports = function(grunt) {
   var path = require('path'),
       Mocha = require('mocha');
 
-  grunt.registerTask('mocha', 'Run tests with mocha', function() {
+  grunt.registerMultiTask('mocha', 'Run tests with mocha', function() {
 
     var filepaths = grunt.file.expandFiles(this.file.src);
     grunt.file.clearRequireCache(filepaths);
