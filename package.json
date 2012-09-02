@@ -1,0 +1,49 @@
+{
+  "name": "grunt-simple-mocha",
+  "description": "A simple wrapper for running tests with Mocha.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/yaymukund/grunt-simple-mocha",
+
+  "author": {
+    "name": "Mukund Lakshman",
+    "email": "yaymukund@gmail.com",
+    "url": "http://yaymukund.com"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yaymukund/grunt-simple-mocha.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/yaymukund/grunt-simple-mocha/issues"
+  },
+
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/yaymukund/grunt-simple-mocha/blob/master/LICENSE-MIT"
+    }
+  ],
+
+  "main": "grunt.js",
+  "bin": "bin/grunt-simple-mocha",
+
+  "engines": {
+    "node": "*"
+  },
+
+  "scripts": {
+    "test": "grunt test"
+  },
+
+  "devDependencies": {
+    "grunt": "~0.3.14"
+  },
+
+  "keywords": [
+    "gruntplugin",
+    "mocha",
+    "test"
+  ]
+}
