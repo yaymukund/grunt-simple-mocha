@@ -45,7 +45,7 @@ Now, you can just run `grunt mocha` in your shell to run the tests. That's it!
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding
 style. Add unit tests for any new or changed functionality. Lint and test your
-code using [grunt][grunt].
+code using [grunt](http://github.com/cowboy/grunt).
 
 ## Release History
 v0.1 - Woo!
