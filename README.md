@@ -54,5 +54,3 @@ v0.1 - Woo!
 Copyright (c) 2012 Mukund Lakshman
 
 Licensed under the MIT license.
-
-[getting_started]: https://github.com/cowboy/grunt/blob/master/docs/getting_started.md
