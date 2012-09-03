@@ -1,8 +1,7 @@
 # grunt-simple-mocha
 
 A simple wrapper for running tests with Mocha. It's pretty much a cleaned up
-and plugin-ized version of
-[this helpful Gist by johnkpaul](https://gist.github.com/2361303).
+and plugin-ized version of [this helpful Gist by johnkpaul][johnkpaul_gist].
 
 ## Installation
 1. Install this grunt plugin next to your project's
@@ -45,7 +44,7 @@ Now, you can just run `grunt mocha` in your shell to run the tests. That's it!
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding
 style. Add unit tests for any new or changed functionality. Lint and test your
-code using [grunt](http://github.com/cowboy/grunt).
+code using [grunt][grunt_github].
 
 ## Release History
 v0.1 - Woo!
@@ -56,3 +55,5 @@ Copyright (c) 2012 Mukund Lakshman
 Licensed under the MIT license.
 
 [getting_started]: https://github.com/cowboy/grunt/blob/master/docs/getting_started.md
+[johnkpaul_gist]: https://gist.github.com/2361303
+[grunt_github]: http://github.com/cowboy/grunt
