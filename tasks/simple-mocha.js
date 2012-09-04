@@ -21,7 +21,16 @@ module.exports = function(grunt) {
         mocha_instance = new Mocha(options);
 
     paths.map(mocha_instance.addFile.bind(mocha_instance));
-    mocha_instance.run(this.async());
+
+    // we will now run mocha asynchronously and receive number of errors in a callback,
+    // which we'll use to report the result of the async task by calling done() with
+    // the appropriate value to indicate whether an error occurred
+    var done = this.async();
+    mocha_instance.run(function(errCount) {
+      // => done(false) if there were errors, done(true) if no errors
+      var withoutErrors = (0 === errCount);
+      done(withoutErrors);
+    });
 
   });
 };
