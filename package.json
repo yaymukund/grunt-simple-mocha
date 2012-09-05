@@ -1,7 +1,7 @@
 {
   "name": "grunt-simple-mocha",
   "description": "A simple wrapper for running tests with Mocha.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/yaymukund/grunt-simple-mocha",
 
   "author": {
