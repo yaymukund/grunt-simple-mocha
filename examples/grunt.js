@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    mocha: {
+    simplemocha: {
       all: {
         src: 'test/**/*.js',
         options: {
@@ -19,5 +19,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-simple-mocha');
 
   // Add a default task.
-  grunt.registerTask('default', 'mocha');
+  grunt.registerTask('default', 'simplemocha');
 };

@@ -9,7 +9,7 @@ and plugin-ized version of [this helpful Gist by johnkpaul][johnkpaul_gist].
 
 2. Then add this line to your project's `grunt.js` gruntfile:
    ```javascript
-   grunt.loadNpmTasks('grunt-simple-mocha');
+   grunt.loadNpmTasks('grunt-simple-mocha';
    ```
 
 ## Usage
@@ -17,7 +17,7 @@ In your grunt.js:
 
 ```javascript
 grunt.initConfig({
-  mocha: {
+  simplemocha: {
     all: {
       src: 'test/**/*.js',
       options: {
@@ -35,11 +35,11 @@ grunt.initConfig({
 // For this to work, you need to have run `npm install grunt-simple-mocha`
 grunt.loadNpmTasks('grunt-simple-mocha');
 
-// Add a default task.
-grunt.registerTask('default', 'mocha');
+// Add a default task. This is optional, of course :)
+grunt.registerTask('default', 'simplemocha');
 ```
 
-Now, you can just run `grunt mocha` in your shell to run the tests. That's it!
+Now, you can just run `grunt simplemocha` in your shell to run the tests. That's it!
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding
@@ -49,6 +49,8 @@ code using [grunt][grunt_github].
 ## Release History
 v0.1 - Woo!
 
+v0.2 - Changed the task name from `mocha` to `simplemocha`. See [#3][issue3].
+
 ## License
 Copyright (c) 2012 Mukund Lakshman
 
@@ -57,3 +59,4 @@ Licensed under the MIT license.
 [getting_started]: https://github.com/cowboy/grunt/blob/master/docs/getting_started.md
 [johnkpaul_gist]: https://gist.github.com/2361303
 [grunt_github]: http://github.com/cowboy/grunt
+[issue3]: https://github.com/yaymukund/grunt-simple-mocha/issues/3
