@@ -3,6 +3,13 @@
 A simple wrapper for running tests with Mocha. It's pretty much a cleaned up
 and plugin-ized version of [this helpful Gist by johnkpaul][johnkpaul_gist].
 
+### Updating from 0.1.x
+
+**Important:** If you were using 0.1.x, the task name has changed from `mocha`
+               to `simplemocha` to avoid confusion with
+               [grunt-mocha][othermocha]. Please make sure your grunt.js file
+               is updated. See [#3][issue3].
+
 ## Installation
 1. Install this grunt plugin next to your project's
    [grunt.js gruntfile][getting_started] with: `npm install grunt-simple-mocha`
@@ -13,6 +20,7 @@ and plugin-ized version of [this helpful Gist by johnkpaul][johnkpaul_gist].
    ```
 
 ## Usage
+
 In your grunt.js:
 
 ```javascript
@@ -60,3 +68,4 @@ Licensed under the MIT license.
 [johnkpaul_gist]: https://gist.github.com/2361303
 [grunt_github]: http://github.com/cowboy/grunt
 [issue3]: https://github.com/yaymukund/grunt-simple-mocha/issues/3
+[othermocha]: https://github.com/kmiyashiro/grunt-mocha
