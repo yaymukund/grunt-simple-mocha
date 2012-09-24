@@ -16,7 +16,7 @@ and plugin-ized version of [this helpful Gist by johnkpaul][johnkpaul_gist].
 
 2. Then add this line to your project's `grunt.js` gruntfile:
    ```javascript
-   grunt.loadNpmTasks('grunt-simple-mocha';
+   grunt.loadNpmTasks('grunt-simple-mocha');
    ```
 
 ## Usage
