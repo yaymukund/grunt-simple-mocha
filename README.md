@@ -3,6 +3,9 @@
 A simple wrapper for running tests with Mocha. It's pretty much a cleaned up
 and plugin-ized version of [this helpful Gist by johnkpaul][johnkpaul_gist].
 
+If you're looking to run client-side specs with PhantomJS, you might be
+interested in [grunt-mocha][othermocha].
+
 ### Updating from 0.1.x
 
 **Important:** If you were using 0.1.x, the task name has changed from `mocha`
