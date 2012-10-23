@@ -21,6 +21,12 @@ module.exports = function(grunt) {
         options = this.data.options || {},
         mocha_instance = new Mocha(options);
 
+    if (this.data.env) {
+      for (var opt in this.data.env) {
+        process.env[opt] = this.data.env[opt]
+      }
+    }
+
     paths.map(mocha_instance.addFile.bind(mocha_instance));
 
     // we will now run mocha asynchronously and receive number of errors in a callback,
