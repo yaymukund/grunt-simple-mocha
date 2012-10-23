@@ -13,7 +13,8 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('simplemocha', 'Run tests with mocha', function() {
 
-    var filepaths = grunt.file.expandFiles(this.file.src);
+    var helpers = require('grunt-lib-contrib').init(grunt);
+    var filepaths = grunt.file.expandFiles(helpers.normalizeMultiTaskFiles(this.data, this.target)[0].src);
     grunt.file.clearRequireCache(filepaths);
 
     var paths = filepaths.map(path.resolve),
