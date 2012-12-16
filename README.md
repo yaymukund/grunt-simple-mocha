@@ -6,6 +6,11 @@ and plugin-ized version of [this helpful Gist by johnkpaul][johnkpaul_gist].
 If you're looking to run client-side specs with PhantomJS, you might be
 interested in [grunt-mocha][othermocha].
 
+### Updating from 0.2.x
+
+This task now depends on grunt 0.4.x. Please see the
+[grunt 0.3 to 0.4 migration guide][migration_guide] for more details.
+
 ### Updating from 0.1.x
 
 **Important:** If you were using 0.1.x, the task name has changed from `mocha`
@@ -15,7 +20,10 @@ interested in [grunt-mocha][othermocha].
 
 ## Installation
 1. Install this grunt plugin next to your project's
-   [grunt.js gruntfile][getting_started] with: `npm install grunt-simple-mocha`
+   [Gruntfile.js][getting_started] with:
+   ```javascript
+   npm install grunt-simple-mocha --save-dev
+   ```
 
 2. Then add this line to your project's `grunt.js` gruntfile:
    ```javascript
@@ -29,17 +37,16 @@ In your grunt.js:
 ```javascript
 grunt.initConfig({
   simplemocha: {
-    all: {
-      src: 'test/**/*.js',
-      options: {
-        globals: ['should'],
-        timeout: 3000,
-        ignoreLeaks: false,
-        grep: '*-test',
-        ui: 'bdd',
-        reporter: 'tap'
-      }
-    }
+    options: {
+      globals: ['should'],
+      timeout: 3000,
+      ignoreLeaks: false,
+      grep: '*-test',
+      ui: 'bdd',
+      reporter: 'tap'
+    },
+
+    all: { src: 'test/**/*.js' }
   }
 });
 
@@ -72,3 +79,4 @@ Licensed under the MIT license.
 [grunt_github]: http://github.com/cowboy/grunt
 [issue3]: https://github.com/yaymukund/grunt-simple-mocha/issues/3
 [othermocha]: https://github.com/kmiyashiro/grunt-mocha
+[migration_guide]: https://github.com/gruntjs/grunt/wiki/Upgrading-from-0.3-to-0.4
