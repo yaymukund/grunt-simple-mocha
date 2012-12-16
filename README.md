@@ -6,17 +6,10 @@ and plugin-ized version of [this helpful Gist by johnkpaul][johnkpaul_gist].
 If you're looking to run client-side specs with PhantomJS, you might be
 interested in [grunt-mocha][othermocha].
 
-### Updating from 0.2.x
+### Updating from 0.2.x to 0.3.x
 
 This task now depends on grunt 0.4.x. Please see the
 [grunt 0.3 to 0.4 migration guide][migration_guide] for more details.
-
-### Updating from 0.1.x
-
-**Important:** If you were using 0.1.x, the task name has changed from `mocha`
-               to `simplemocha` to avoid confusion with
-               [grunt-mocha][othermocha]. Please make sure your grunt.js file
-               is updated. See [#3][issue3].
 
 ## Installation
 1. Install this grunt plugin next to your project's
@@ -64,10 +57,25 @@ In lieu of a formal styleguide, take care to maintain the existing coding
 style. Add unit tests for any new or changed functionality. Lint and test your
 code using [grunt][grunt_github].
 
+## Migration Guides
+
+### Updating from 0.2.x to 0.3.x
+
+This task now depends on grunt 0.4.x. Please see the
+[grunt 0.3 to 0.4 migration guide][migration_guide] for more details.
+
+### Updating from 0.1.x to 0.2.x
+
+If you were using 0.1.x, the task name has changed from `mocha` to
+`simplemocha` to avoid confusion with [grunt-mocha][othermocha]. Please make
+sure your grunt.js file is updated. See [#3][issue3].  
+
 ## Release History
 v0.1 - Woo!
 
 v0.2 - Changed the task name from `mocha` to `simplemocha`. See [#3][issue3].
+
+v0.3 - Updated to support grunt 0.4.x.
 
 ## License
 Copyright (c) 2012 Mukund Lakshman
