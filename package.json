@@ -37,6 +37,10 @@
     "test": "grunt test"
   },
 
+  "dependencies": {
+    "mocha": "*"
+  },
+
   "devDependencies": {
     "grunt": "~0.3.14"
   },
