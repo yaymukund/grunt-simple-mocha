@@ -15,9 +15,18 @@ module.exports = function(grunt) {
   grunt.registerMultiTask('simplemocha', 'Run tests with mocha', function() {
 
     var paths = this.file.src.map(path.resolve),
+        assertionLibs = {
+          should: 'node_modules/should/lib/should',
+          expect: 'node_modules/expect/expect',
+          chai: 'node_modules/chai/chai'
+        },
         options = this.options(),
         mocha_instance = new Mocha(options);
 
+    //optionally include assertion lib
+    if(options.require){
+      mocha_instance.addFile.call(mocha_instance, path.resolve(assertionLibs[options.require]));
+    }
     paths.map(mocha_instance.addFile.bind(mocha_instance));
 
     // We will now run mocha asynchronously and receive number of errors in a
