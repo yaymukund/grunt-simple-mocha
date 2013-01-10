@@ -9,13 +9,13 @@
 
 module.exports = function(grunt) {
 
-  var path = require('path'),
+  var grunt = require('grunt'),
       Mocha = require('mocha');
 
   grunt.registerMultiTask('simplemocha', 'Run tests with mocha', function() {
 
-    var paths = this.file.src.map(path.resolve),
-        options = this.options(),
+    var paths = grunt.file.expand(this.data.src),
+        options = this.data.options || {},
         mocha_instance = new Mocha(options);
 
     paths.map(mocha_instance.addFile.bind(mocha_instance));
