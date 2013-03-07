@@ -38,7 +38,7 @@
   },
 
   "dependencies": {
-    "mocha": "*"
+    "mocha": "1.7"
   },
 
   "devDependencies": {
