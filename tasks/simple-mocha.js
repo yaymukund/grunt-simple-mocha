@@ -14,7 +14,9 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('simplemocha', 'Run tests with mocha', function() {
 
-    var paths = this.filesSrc.map(path.resolve),
+    var paths = this.filesSrc.map(function (fileSrc) {
+          return path.resolve(fileSrc);
+        }),
         options = this.options(),
         mocha_instance = new Mocha(options);
 
