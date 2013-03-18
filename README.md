@@ -39,7 +39,7 @@ grunt.initConfig({
       reporter: 'tap'
     },
 
-    all: { src: 'test/**/*.js' }
+    all: [ src: 'test/**/*.js' ]
   }
 });
 
