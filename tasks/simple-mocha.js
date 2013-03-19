@@ -14,11 +14,10 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('simplemocha', 'Run tests with mocha', function() {
 
-    var paths = this.filesSrc.map(path.resolve),
-        options = this.options(),
+    var options = this.options(),
         mocha_instance = new Mocha(options);
 
-    paths.map(mocha_instance.addFile.bind(mocha_instance));
+    this.filesSrc.forEach(mocha_instance.addFile.bind(mocha_instance));
 
     // We will now run mocha asynchronously and receive number of errors in a
     // callback, which we'll use to report the result of the async task by
