@@ -16,10 +16,12 @@ module.exports = function(grunt) {
 
     var paths = this.filesSrc.map(path.resolve),
         options = this.options(),
+        requires = [].concat(options.require || []),
         mocha_instance = new Mocha(options);
 
     paths.map(mocha_instance.addFile.bind(mocha_instance));
 
+    requires.forEach(require);
     // We will now run mocha asynchronously and receive number of errors in a
     // callback, which we'll use to report the result of the async task by
     // calling done() with the appropriate value to indicate whether an error
