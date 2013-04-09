@@ -39,7 +39,7 @@ grunt.initConfig({
       reporter: 'tap'
     },
 
-    all: { src: 'test/**/*.js' }
+    all: { src: ['test/**/*.js'] }
   }
 });
 
@@ -76,6 +76,8 @@ v0.1 - Woo!
 v0.2 - Changed the task name from `mocha` to `simplemocha`. See [#3][issue3].
 
 v0.3 - Updated to support grunt 0.4.x.
+
+v0.4 - Updated to support node 0.10.x.
 
 ## License
 Copyright (c) 2012 Mukund Lakshman

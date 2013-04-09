@@ -2,7 +2,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     simplemocha: {
       all: {
-        src: 'test/**/*.js',
+        src: ['test/**/*.js'],
         options: {
           globals: ['should'],
           timeout: 3000,
