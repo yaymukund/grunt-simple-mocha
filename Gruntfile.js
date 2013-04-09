@@ -7,6 +7,16 @@ module.exports = function(grunt) {
       tasks: 'default'
     },
 
+    simplemocha: {
+      options: {
+        useColors: true,
+        timeout: 1000,
+        reporter: 'spec'
+      },
+
+      all: ['test/*.js']
+    },
+
     jshint: {
       options: {
         curly: true,
@@ -31,6 +41,8 @@ module.exports = function(grunt) {
   // Load local tasks.
   grunt.loadTasks('tasks');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+
+  grunt.registerTask('test', 'simplemocha:all');
 
   // Default task.
   grunt.registerTask('default', 'jshint');
