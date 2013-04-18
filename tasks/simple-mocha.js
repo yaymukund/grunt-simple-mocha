@@ -32,7 +32,7 @@ module.exports = function(grunt) {
 
     var options = this.options(),
         mocha_instance = new Mocha(options);
-    var dest, reporterOut;
+    var dest, reporterOut = '';
     if (this.files && this.files.length > 0 && this.files[0].dest) {
       dest = this.files[0].dest;
     }
