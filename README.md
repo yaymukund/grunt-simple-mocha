@@ -39,7 +39,10 @@ grunt.initConfig({
       reporter: 'tap'
     },
 
-    all: { src: ['test/**/*.js'] }
+    all: { 
+      src: 'test/**/*.js',
+      dest: 'test/report.xml' // optional, ideal for xunit reporter
+    }
   }
 });
 
