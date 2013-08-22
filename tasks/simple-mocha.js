@@ -15,7 +15,10 @@ module.exports = function(grunt) {
   grunt.registerMultiTask('simplemocha', 'Run tests with mocha', function() {
 
     var options = this.options(),
-        mocha_instance = new Mocha(options);
+        mocha_instance = new Mocha(options),
+        force = options.force;
+
+    options.force = undefined;
 
     this.filesSrc.forEach(mocha_instance.addFile.bind(mocha_instance));
 
@@ -27,7 +30,7 @@ module.exports = function(grunt) {
     var done = this.async();
 
     mocha_instance.run(function(errCount) {
-      var withoutErrors = (errCount === 0);
+      var withoutErrors = force || (errCount === 0);
       done(withoutErrors);
     });
   });
