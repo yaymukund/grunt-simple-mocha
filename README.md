@@ -52,6 +52,12 @@ grunt.registerTask('default', 'simplemocha');
 
 Now, you can just run `grunt simplemocha` in your shell to run the tests. That's it!
 
+## Options
+The ```force``` option specifies that the task should report success, even if tests fail.
+This is useful if you are using watch to continuously run your tests.
+
+The other options are passed to mocha directly.
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding
 style. Add unit tests for any new or changed functionality. Lint and test your
