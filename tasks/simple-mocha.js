@@ -27,6 +27,9 @@ module.exports = function(grunt) {
     var done = this.async();
 
     mocha_instance.run(function(errCount) {
+      if (errCount !== 0) {
+          grunt.warn(errCount + "/" + mocha_instance.suite.total() + " tests failed.");
+      }
       var withoutErrors = (errCount === 0);
       done(withoutErrors);
     });
