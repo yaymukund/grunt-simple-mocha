@@ -31,7 +31,7 @@ In your grunt.js:
 grunt.initConfig({
   simplemocha: {
     options: {
-      globals: ['should'],
+      globals: ['window','document','$','should'],
       timeout: 3000,
       ignoreLeaks: false,
       grep: '*-test',
