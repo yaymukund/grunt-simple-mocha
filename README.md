@@ -6,11 +6,6 @@ and plugin-ized version of [this helpful Gist by johnkpaul][johnkpaul_gist].
 If you're looking to run client-side specs with PhantomJS, you might be
 interested in [grunt-mocha][othermocha].
 
-### Updating from 0.2.x to 0.3.x
-
-This task now depends on grunt 0.4.x. Please see the
-[grunt 0.3 to 0.4 migration guide][migration_guide] for more details.
-
 ## Installation
 1. Install this grunt plugin next to your project's
    [Gruntfile.js][getting_started] with:
