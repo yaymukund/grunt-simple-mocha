@@ -17,6 +17,12 @@ module.exports = function(grunt) {
     var options = this.options(),
         mocha_instance = new Mocha(options);
 
+    // Require test modules to be fresh on each run.
+    mocha_instance.suite.on('pre-require', function(context, file) {
+      if(require.cache[file]) {// Module was cached, remove.
+        delete require.cache[file];
+      }
+    });
     this.filesSrc.forEach(mocha_instance.addFile.bind(mocha_instance));
 
     // We will now run mocha asynchronously and receive number of errors in a
