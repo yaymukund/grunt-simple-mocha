@@ -30,13 +30,21 @@ In your grunt.js:
 ```javascript
 grunt.initConfig({
   simplemocha: {
+    //
+    // These are passed directly to the mocha constructor. See:
+    //   https://github.com/mochajs/mocha/blob/master/lib/mocha.js#L56-L74
+    //
     options: {
+      ui: 'bdd',
+      reporter: 'tap',
       globals: ['window','document','$','should'],
       timeout: 3000,
+      retries: 2,
+      bail: false,
+      slow: 2000,
       ignoreLeaks: false,
-      grep: '*-test',
-      ui: 'bdd',
-      reporter: 'tap'
+      fullTrace: true
+      grep: 'users',
     },
 
     all: { src: ['test/**/*.js'] }
@@ -51,6 +59,10 @@ grunt.registerTask('default', 'simplemocha');
 ```
 
 Now, you can just run `grunt simplemocha` in your shell to run the tests. That's it!
+
+## Running tests
+
+Run `npm install && npm test`
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding
@@ -71,13 +83,12 @@ If you were using 0.1.x, the task name has changed from `mocha` to
 sure your grunt.js file is updated. See [#3][issue3].  
 
 ## Release History
-v0.1 - Woo!
 
-v0.2 - Changed the task name from `mocha` to `simplemocha`. See [#3][issue3].
-
-v0.3 - Updated to support grunt 0.4.x.
-
-v0.4 - Updated to support node 0.10.x.
+* v0.1 - Woo!
+* v0.2 - Changed the task name from `mocha` to `simplemocha`. See [#3][issue3].
+* v0.3 - Updated to support grunt 0.4.x.
+* v0.4 - Updated to support node 0.10.x.
+* v0.4.1 - Updated readme and added tests.
 
 ## License
 Copyright (c) 2012 Mukund Lakshman
