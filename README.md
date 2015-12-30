@@ -25,7 +25,42 @@ This task now depends on grunt 0.4.x. Please see the
 
 ## Usage
 
-In your grunt.js:
+In your Gruntfile.js:
+
+```javascript
+grunt.initConfig({
+  simplemocha: {
+    all: {
+      src: ['test/**/*.js', '**/*.spec.js']
+    }
+  }
+});
+
+// For this to work, you need to have run `npm install grunt-simple-mocha`
+grunt.loadNpmTasks('grunt-simple-mocha');
+
+// Add a default task. This is optional, of course :)
+grunt.registerTask('default', 'simplemocha');
+```
+
+Now, you can just run `grunt simplemocha` in your shell to run the tests. That's it!
+
+## Advanced Mocha Options
+
+All `options` parameters are passed directly to Mocha. Therefore, you can use these options to configure how Mocha runs.
+
+  - `ui` name "bdd", "tdd", "exports" etc
+  - `reporter` reporter instance, defaults to `mocha.reporters.spec`
+  - `globals` array of accepted globals
+  - `timeout` timeout in milliseconds
+  - `retries` number of times to retry failed tests
+  - `bail` bail on the first test failure
+  - `slow` milliseconds to wait before considering a test slow
+  - `ignoreLeaks` ignore global leaks
+  - `fullTrace` display the full stack-trace on failing
+  - `grep` string or regexp to filter tests with
+
+The Gruntfile configuration would look like this:
 
 ```javascript
 grunt.initConfig({
@@ -42,15 +77,8 @@ grunt.initConfig({
     all: { src: ['test/**/*.js'] }
   }
 });
-
-// For this to work, you need to have run `npm install grunt-simple-mocha`
-grunt.loadNpmTasks('grunt-simple-mocha');
-
-// Add a default task. This is optional, of course :)
-grunt.registerTask('default', 'simplemocha');
 ```
 
-Now, you can just run `grunt simplemocha` in your shell to run the tests. That's it!
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding
