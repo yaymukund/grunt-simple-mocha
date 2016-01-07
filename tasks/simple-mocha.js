@@ -26,7 +26,21 @@ module.exports = function(grunt) {
 
     var done = this.async();
 
+    // Grunt registers a handler for uncaught exceptions that
+    // immediately fails the current task. However mocha also has its
+    // own handler for uncaught exceptions that fails the current test
+    // case which gets pre-empted by the grunt handlers.
+    //
+    // To handle this, temporarily remove any handlers and then
+    // restore them when mocha is all done.
+    var handlers = process.listeners('uncaughtException');
+    process.removeAllListeners('uncaughtException');
+
     mocha_instance.run(function(errCount) {
+      handlers.forEach(function(h) {
+          process.on('uncaughtException', h);
+      });
+
       var withoutErrors = (errCount === 0);
       done(withoutErrors);
     });
