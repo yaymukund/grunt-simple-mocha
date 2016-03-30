@@ -73,8 +73,8 @@ grunt.initConfig({
       bail: false,
       slow: 2000,
       ignoreLeaks: false,
-      fullTrace: true
-      grep: 'users',
+      fullTrace: true,
+      grep: 'users'
     },
 
     all: { src: ['test/**/*.js'] }
