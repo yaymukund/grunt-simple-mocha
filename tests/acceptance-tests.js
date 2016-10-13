@@ -34,4 +34,12 @@ describe('acceptance tests for simplemocha', function() {
       done();
     });
   });
+
+  it('fails if files loaded into mocha do not load cleanly', function(done) {
+    grunt('error-on-load', function(error, stdout, stderr) {
+      assert(error, 'expected error to be thrown on load');
+      assert.ok(error.code > 0);
+      done();
+    });
+  });
 });
